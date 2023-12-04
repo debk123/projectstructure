@@ -1,4 +1,5 @@
 ﻿using Pro_DAL.Repo;
+using Pro_EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Web.Http;
 
 namespace Pro_WebApiLayer.Controllers
 {
-    [Authorize(Roles ="customer")]
+    [Authorize(Roles ="customer,admin")]
     public class ProductWebApiController : ApiController
     {
         IProduct ProdService;
@@ -36,6 +37,25 @@ namespace Pro_WebApiLayer.Controllers
                 }
             }
             catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [HttpPost]
+        [Route("AddProduct")]
+        public IHttpActionResult AddProduct(ProductModel NewProduct)
+        {
+            try
+            {
+                ProdService.AddProduct(NewProduct);
+              
+                 return Ok("record added");
+              
+               
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }

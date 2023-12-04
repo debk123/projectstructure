@@ -28,7 +28,9 @@ namespace Pro_UILayer.Controllers
                 try
                 {
                     //Client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwt.Value);
+                  
                     AppClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Session["UserSession"].ToString());
+                    
                     var res = AppClient.GetAsync("ShowProducts").Result;
 
                     if (res.IsSuccessStatusCode)
@@ -43,6 +45,7 @@ namespace Pro_UILayer.Controllers
                     else if (res.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                     {
                         TempData["Err"] = "UnAthorized to access resource";
+                        return RedirectToAction("login", "account");
                     }
                 }
                 catch (Exception ex)
@@ -53,6 +56,47 @@ namespace Pro_UILayer.Controllers
             else
             {
                 return RedirectToAction("Login","Account");
+            }
+            return View();
+        }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddProduct(ProductModel NewProduct)
+        {           
+            if (Session["UserSession"] != null)
+            {
+
+                try
+                {
+                    //Client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwt.Value);
+
+                    AppClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Session["UserSession"].ToString());
+
+                    var res = AppClient.PostAsJsonAsync<ProductModel>("Addproduct", NewProduct).Result;
+
+                    if (res.IsSuccessStatusCode)
+                    {
+                        return RedirectToAction("showproducts");
+
+                    }
+                    else if (res.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        TempData["Err"] = "UnAthorized to access resource";
+                        return RedirectToAction("login", "account");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TempData["Err"] = ex.Message;
+                }
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
             }
             return View();
         }

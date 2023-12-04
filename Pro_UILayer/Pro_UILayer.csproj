@@ -226,6 +226,7 @@
     <Content Include="Views\Account\Simp.cshtml" />
     <Content Include="Views\Product\ShowProduct.cshtml" />
     <Content Include="Views\Mix\Index.cshtml" />
+    <Content Include="Views\Product\AddProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

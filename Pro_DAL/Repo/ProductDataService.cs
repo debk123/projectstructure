@@ -44,6 +44,27 @@ namespace Pro_DAL.Repo
             }
         }
 
+        public void AddProduct(ProductModel NewProduct)
+        {
+            try
+            {
+                Product p = new Product();
+              
+                p.Pid = NewProduct.Pid;
+                p.Pname = NewProduct.Pname;
+
+
+                ProDb.Products.Add(p);
+                ProDb.SaveChanges();
+             
+               
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public IEnumerable<ProductModel> GetProducts()
         {
             try

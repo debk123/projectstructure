@@ -10,5 +10,6 @@ namespace Pro_DAL.Repo
     {
         IEnumerable<ProductModel> GetProducts();
         ProductModel GetProduct(int id);
+        void AddProduct(ProductModel NewRecord);
     }
 }
