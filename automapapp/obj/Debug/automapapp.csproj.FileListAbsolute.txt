@@ -1,0 +1,10 @@
+E:\Dec23Mon\ProjectStruture\automapapp\bin\Debug\automapapp.exe.config
+E:\Dec23Mon\ProjectStruture\automapapp\bin\Debug\automapapp.exe
+E:\Dec23Mon\ProjectStruture\automapapp\bin\Debug\automapapp.pdb
+E:\Dec23Mon\ProjectStruture\automapapp\bin\Debug\AutoMapper.dll
+E:\Dec23Mon\ProjectStruture\automapapp\bin\Debug\AutoMapper.xml
+E:\Dec23Mon\ProjectStruture\automapapp\obj\Debug\automapapp.csproj.AssemblyReference.cache
+E:\Dec23Mon\ProjectStruture\automapapp\obj\Debug\automapapp.csproj.CoreCompileInputs.cache
+E:\Dec23Mon\ProjectStruture\automapapp\obj\Debug\automapapp.csproj.CopyComplete
+E:\Dec23Mon\ProjectStruture\automapapp\obj\Debug\automapapp.exe
+E:\Dec23Mon\ProjectStruture\automapapp\obj\Debug\automapapp.pdb

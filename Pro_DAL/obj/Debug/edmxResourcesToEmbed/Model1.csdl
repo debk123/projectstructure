@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DecDb23NewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" />
+    <Property Name="Pname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="mixes" Relationship="DecDb23NewModel.FK_mix_UserProfile" FromRole="UserProfile" ToRole="mix" />
+  </EntityType>
+  <EntityContainer Name="DecDb23NewEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="mixes" EntityType="DecDb23NewModel.mix" />
+    <AssociationSet Name="FK_mix_UserProfile" Association="DecDb23NewModel.FK_mix_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="mix" EntitySet="mixes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="mix">
+    <Key>
+      <PropertyRef Name="mid" />
+    </Key>
+    <Property Name="mid" Type="Int32" Nullable="false" />
+    <Property Name="mname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pid" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserProfile" Relationship="DecDb23NewModel.FK_mix_UserProfile" FromRole="mix" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="FK_mix_UserProfile">
+    <End Type="DecDb23NewModel.UserProfile" Role="UserProfile" Multiplicity="1" />
+    <End Type="DecDb23NewModel.mix" Role="mix" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="User_Id" />
+      </Principal>
+      <Dependent Role="mix">
+        <PropertyRef Name="uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

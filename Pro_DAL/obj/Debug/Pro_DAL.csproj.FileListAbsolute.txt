@@ -1,0 +1,14 @@
+E:\Dec23Mon\ProjectStruture\Pro_DAL\obj\Debug\Pro_DAL.csproj.AssemblyReference.cache
+E:\Dec23Mon\ProjectStruture\Pro_DAL\obj\Debug\Pro_DAL.csproj.CoreCompileInputs.cache
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\Pro_DAL.dll.config
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\Pro_DAL.dll
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\Pro_DAL.pdb
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\EntityFramework.dll
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\Pro_EntityLayer.dll
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\Pro_EntityLayer.pdb
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\EntityFramework.xml
+E:\Dec23Mon\ProjectStruture\Pro_DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Dec23Mon\ProjectStruture\Pro_DAL\obj\Debug\Pro_DAL.csproj.CopyComplete
+E:\Dec23Mon\ProjectStruture\Pro_DAL\obj\Debug\Pro_DAL.dll
+E:\Dec23Mon\ProjectStruture\Pro_DAL\obj\Debug\Pro_DAL.pdb
