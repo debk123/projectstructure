@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DecDb23NewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="int" Nullable="false" />
+          <Property Name="cname" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="mix">
           <Key>
             <PropertyRef Name="mid" />
@@ -43,6 +50,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DecDb23NewModelStoreContainer">
+          <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mix" EntityType="Self.mix" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
@@ -80,6 +88,7 @@
             <End Role="UserProfile" EntitySet="UserProfiles" />
             <End Role="mix" EntitySet="mixes" />
           </AssociationSet>
+          <EntitySet Name="Cars" EntityType="DecDb23NewModel.Car" />
         </EntityContainer>
         <EntityType Name="mix">
           <Key>
@@ -103,6 +112,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="Int32" Nullable="false" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -134,6 +150,14 @@
                 <ScalarProperty Name="pid" ColumnName="pid" />
                 <ScalarProperty Name="mname" ColumnName="mname" />
                 <ScalarProperty Name="mid" ColumnName="mid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="DecDb23NewModel.Car">
+              <MappingFragment StoreEntitySet="Car">
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="cid" ColumnName="cid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

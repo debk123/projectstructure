@@ -163,6 +163,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CarUIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MixController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -227,6 +228,9 @@
     <Content Include="Views\Product\ShowProduct.cshtml" />
     <Content Include="Views\Mix\Index.cshtml" />
     <Content Include="Views\Product\AddProduct.cshtml" />
+    <Content Include="Views\CarUI\showCars.cshtml" />
+    <Content Include="Views\Mix\showdata.cshtml" />
+    <Content Include="Views\Mix\showdataJson.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -80,7 +80,7 @@ namespace Pro_UILayer.Controllers
 
                     if (res.IsSuccessStatusCode)
                     {
-                        return RedirectToAction("showproducts");
+                        return RedirectToAction("showproduct");
 
                     }
                     else if (res.StatusCode == System.Net.HttpStatusCode.Unauthorized)

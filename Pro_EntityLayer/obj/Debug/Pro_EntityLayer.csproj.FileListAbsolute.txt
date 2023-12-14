@@ -1,6 +1,5 @@
 E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\bin\Debug\Pro_EntityLayer.dll
 E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\bin\Debug\Pro_EntityLayer.pdb
-E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\obj\Debug\Pro_EntityLayer.csproj.AssemblyReference.cache
 E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\obj\Debug\Pro_EntityLayer.csproj.CoreCompileInputs.cache
 E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\obj\Debug\Pro_EntityLayer.dll
 E:\Dec23Mon\ProjectStruture\Pro_EntityLayer\obj\Debug\Pro_EntityLayer.pdb

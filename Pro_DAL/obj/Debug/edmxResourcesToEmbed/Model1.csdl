@@ -25,6 +25,7 @@
       <End Role="UserProfile" EntitySet="UserProfiles" />
       <End Role="mix" EntitySet="mixes" />
     </AssociationSet>
+    <EntitySet Name="Cars" EntityType="DecDb23NewModel.Car" />
   </EntityContainer>
   <EntityType Name="mix">
     <Key>
@@ -48,4 +49,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" />
+    <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

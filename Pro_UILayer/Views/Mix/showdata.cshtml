@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Pro_DAL.mix>
+
+@{
+    ViewBag.Title = "showdata";
+}
+
+<h2>showdata</h2>
+
+<p>
+    @Html.ActionLink("Add new", "Index")
+</p>
+<table id="tm" class="table table-bordered" name="tm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.mid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uid)
+            </th>
+            <th></th>
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+<tbody>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.uid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+</tbody>
+    }
+
+</table>
+
+@section scripts{
+    <script>
+        $(function () {
+            alert('welcome');
+            alert($('#tm'));
+            $('#tm').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true,
+               
+            });
+        });
+    </script>
+}  

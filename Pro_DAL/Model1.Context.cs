@@ -28,5 +28,6 @@ namespace Pro_DAL
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<UserProfile> UserProfiles { get; set; }
         public virtual DbSet<mix> mixes { get; set; }
+        public virtual DbSet<Car> Cars { get; set; }
     }
 }

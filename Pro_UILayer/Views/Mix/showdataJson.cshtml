@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Pro_DAL.mix>
+
+@{
+    ViewBag.Title = "showdataJson";
+}
+
+<h2>showdataJson</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="tmt">
+    <thead>
+        <tr>
+            <th>
+                mid
+            </th>
+            <th>
+                mname
+            </th>
+            <th>
+                pid
+            </th>
+            <th>
+               uid
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+</table>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+@section scripts{
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert('in');
+            $("#tmt").DataTable({
+                "sAjaxSource": "/mix/showdatajson",
+                "bServerSide": true,
+                "columns": [
+                    {
+                        "data": "mid",
+                        "autoWidth": true,
+                        "searchable": true
+                    }]
+            });
+        });
+
+
+    </script>
+}

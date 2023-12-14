@@ -16,7 +16,7 @@ namespace Pro_UILayer
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Account", action = "login", id = UrlParameter.Optional }
+                defaults: new { controller = "mix", action = "index", id = UrlParameter.Optional }
             );
         }
     }

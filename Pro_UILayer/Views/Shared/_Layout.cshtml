@@ -4,8 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,17 +29,18 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("ShowProducts", "ShowProduct", "Product", new { area = "" }, null)</li>
-                   
-                    @if(TempData["login"]!= null)
+
+                    <li>@Html.ActionLink("Car", "ShowCars", "CarUi", new { area = "" }, null)</li>
+                    @if (TempData["login"] != null)
                     {
-                    if(TempData["login"].ToString()=="enabled")
-                    {
-                        <li>@Html.ActionLink("LogIn", "Login", "Account", new { area = "" }, null)</li>
-                    }
-                    else
-                    {
-                        <li>@Html.ActionLink("LogOut", "LogOut", "Account", new { area = "" }, null)</li>
-                    }
+                        if (TempData["login"].ToString() == "enabled")
+                        {
+                            <li>@Html.ActionLink("LogIn", "Login", "Account", new { area = "" }, null)</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("LogOut", "LogOut", "Account", new { area = "" }, null)</li>
+                        }
                     }
                 </ul>
             </div>

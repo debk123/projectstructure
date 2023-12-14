@@ -56,6 +56,7 @@ E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\EntityFramework.SqlServer.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Microsoft.Web.Infrastructure.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Newtonsoft.Json.dll
+E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_EntityLayer.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\System.Net.Http.Formatting.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\System.Web.Helpers.dll
@@ -68,6 +69,8 @@ E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\System.Web.WebPages.Deployment.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\System.Web.WebPages.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\System.Web.WebPages.Razor.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\WebGrease.dll
+E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.pdb
+E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.dll.config
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_EntityLayer.pdb
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\EntityFramework.xml
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\EntityFramework.SqlServer.xml
@@ -89,6 +92,3 @@ E:\Dec23Mon\ProjectStruture\Pro_UILayer\obj\Debug\Pro_UILayer.csproj.CoreCompile
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\obj\Debug\Pro_UILayer.csproj.CopyComplete
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\obj\Debug\Pro_UILayer.dll
 E:\Dec23Mon\ProjectStruture\Pro_UILayer\obj\Debug\Pro_UILayer.pdb
-E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.dll
-E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.pdb
-E:\Dec23Mon\ProjectStruture\Pro_UILayer\bin\Pro_DAL.dll.config

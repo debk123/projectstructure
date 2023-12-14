@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="DecDb23NewModel.UserProfile" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DecDb23NewModel.mix" Width="1.5" PointX="5.25" PointY="1.75" />
         <AssociationConnector Association="DecDb23NewModel.FK_mix_UserProfile" />
+        <EntityTypeShape EntityType="DecDb23NewModel.Car" Width="1.5" PointX="1.375" PointY="3.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
